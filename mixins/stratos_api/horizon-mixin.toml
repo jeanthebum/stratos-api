@@ -1,0 +1,12 @@
+[mod]
+id = "stratos_api"
+version = "0.1.0"
+priority = 100
+
+[compatibility]
+horizon_revision = "fd06d1c2650b52d8d4bb3d808ca73e55971ba717"
+
+[[crate]]
+id = "core"
+path = "core"
+dependent = "horizon-shader-api"

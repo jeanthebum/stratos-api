@@ -1,0 +1,54 @@
+schema = 1
+id = "stratos_summer_example"
+name = "StratosAPI Summer Example"
+version = "1.0.0"
+api = "0.2"
+description = "Small original example: linear lighting, biome response and procedural rain."
+
+[stratos]
+api = ">=0.1.0, <0.2.0"
+
+[stratos.weather]
+liquid_droplets = true
+leaf_drips_option = "leaf_beads"
+humidity_option = "humidity"
+enabled_option = "wet_effects"
+
+[frame]
+blend = "gamma"
+
+[sky]
+file = "sky.wgsl"
+sun = false
+clouds = false
+
+[material]
+file = "material.wgsl"
+
+[weather]
+file = "weather.wgsl"
+
+[tonemap]
+file = "tonemap.wgsl"
+
+[[options]]
+id = "leaf_beads"
+name = "Leaf beads"
+type = "float"
+min = 0.0
+max = 2.0
+default = 1.0
+
+[[options]]
+id = "humidity"
+name = "Humidity"
+type = "float"
+min = 0.0
+max = 2.0
+default = 1.0
+
+[[options]]
+id = "wet_effects"
+name = "Wet effects"
+type = "bool"
+default = true

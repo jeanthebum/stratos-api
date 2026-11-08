@@ -1,0 +1,333 @@
+{
+  "api": "0.1.0",
+  "fields": [
+    {
+      "name": "view",
+      "offset": 0,
+      "type": "mat4x4<f32>"
+    },
+    {
+      "name": "projection",
+      "offset": 64,
+      "type": "mat4x4<f32>"
+    },
+    {
+      "name": "view_inverse",
+      "offset": 128,
+      "type": "mat4x4<f32>"
+    },
+    {
+      "name": "projection_inverse",
+      "offset": 192,
+      "type": "mat4x4<f32>"
+    },
+    {
+      "name": "camera_position",
+      "offset": 256,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "time",
+      "offset": 268,
+      "type": "f32"
+    },
+    {
+      "name": "sun_direction",
+      "offset": 272,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "day_time",
+      "offset": 284,
+      "type": "f32"
+    },
+    {
+      "name": "moon_direction",
+      "offset": 288,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "game_time",
+      "offset": 300,
+      "type": "f32"
+    },
+    {
+      "name": "sky_color",
+      "offset": 304,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "rain",
+      "offset": 316,
+      "type": "f32"
+    },
+    {
+      "name": "fog_color",
+      "offset": 320,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "thunder",
+      "offset": 332,
+      "type": "f32"
+    },
+    {
+      "name": "resolution",
+      "offset": 336,
+      "type": "vec2<f32>"
+    },
+    {
+      "name": "eye_light",
+      "offset": 344,
+      "type": "vec2<f32>"
+    },
+    {
+      "name": "fog_start",
+      "offset": 352,
+      "type": "f32"
+    },
+    {
+      "name": "fog_end",
+      "offset": 356,
+      "type": "f32"
+    },
+    {
+      "name": "render_distance",
+      "offset": 360,
+      "type": "f32"
+    },
+    {
+      "name": "far",
+      "offset": 364,
+      "type": "f32"
+    },
+    {
+      "name": "night_vision",
+      "offset": 368,
+      "type": "f32"
+    },
+    {
+      "name": "blindness",
+      "offset": 372,
+      "type": "f32"
+    },
+    {
+      "name": "darkness",
+      "offset": 376,
+      "type": "f32"
+    },
+    {
+      "name": "brightness",
+      "offset": 380,
+      "type": "f32"
+    },
+    {
+      "name": "eye_in",
+      "offset": 384,
+      "type": "u32"
+    },
+    {
+      "name": "dimension",
+      "offset": 388,
+      "type": "i32"
+    },
+    {
+      "name": "frame_index",
+      "offset": 392,
+      "type": "u32"
+    },
+    {
+      "name": "hide_gui",
+      "offset": 396,
+      "type": "u32"
+    },
+    {
+      "name": "precipitation",
+      "offset": 400,
+      "type": "u32"
+    },
+    {
+      "name": "temperature",
+      "offset": 404,
+      "type": "f32"
+    },
+    {
+      "name": "downfall",
+      "offset": 408,
+      "type": "f32"
+    },
+    {
+      "name": "wetness",
+      "offset": 412,
+      "type": "f32"
+    },
+    {
+      "name": "previous_view_projection",
+      "offset": 416,
+      "type": "mat4x4<f32>"
+    },
+    {
+      "name": "camera_motion",
+      "offset": 480,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "delta_time",
+      "offset": 492,
+      "type": "f32"
+    },
+    {
+      "name": "eye_light_smooth",
+      "offset": 496,
+      "type": "vec2<f32>"
+    },
+    {
+      "name": "in_water",
+      "offset": 504,
+      "type": "f32"
+    },
+    {
+      "name": "in_lava",
+      "offset": 508,
+      "type": "f32"
+    },
+    {
+      "name": "water_plane",
+      "offset": 512,
+      "type": "f32"
+    },
+    {
+      "name": "has_reflection",
+      "offset": 516,
+      "type": "u32"
+    },
+    {
+      "name": "reflection_resolution",
+      "offset": 520,
+      "type": "vec2<f32>"
+    },
+    {
+      "name": "mods",
+      "offset": 528,
+      "type": "array<vec4<f32>, 8>"
+    },
+    {
+      "name": "light_direction",
+      "offset": 656,
+      "type": "vec3<f32>"
+    },
+    {
+      "name": "has_shadow",
+      "offset": 668,
+      "type": "u32"
+    },
+    {
+      "name": "shadow_view_proj",
+      "offset": 672,
+      "type": "mat4x4<f32>"
+    },
+    {
+      "name": "shadow_distance",
+      "offset": 736,
+      "type": "f32"
+    },
+    {
+      "name": "shadow_distortion",
+      "offset": 740,
+      "type": "f32"
+    },
+    {
+      "name": "shadow_resolution",
+      "offset": 744,
+      "type": "f32"
+    },
+    {
+      "name": "shadow_center_texel",
+      "offset": 748,
+      "type": "f32"
+    },
+    {
+      "name": "hdr",
+      "offset": 752,
+      "type": "u32"
+    },
+    {
+      "name": "headroom",
+      "offset": 756,
+      "type": "f32"
+    },
+    {
+      "name": "paper_white",
+      "offset": 760,
+      "type": "f32"
+    },
+    {
+      "name": "peak",
+      "offset": 764,
+      "type": "f32"
+    },
+    {
+      "name": "black_level",
+      "offset": 768,
+      "type": "f32"
+    },
+    {
+      "name": "biome_jungle",
+      "offset": 772,
+      "type": "f32"
+    },
+    {
+      "name": "biome_swamp",
+      "offset": 776,
+      "type": "f32"
+    },
+    {
+      "name": "biome_taiga",
+      "offset": 780,
+      "type": "f32"
+    },
+    {
+      "name": "biome_other",
+      "offset": 784,
+      "type": "vec4<f32>"
+    },
+    {
+      "name": "biome_landscape",
+      "offset": 800,
+      "type": "vec4<f32>"
+    }
+  ],
+  "frame_bytes": 816,
+  "stages": [
+    {
+      "entries_sha256": "54bac4d416d804d8a96e1e31a6d62460f77573634c1e7bec16670641355d678a",
+      "prelude_sha256": "26b7a630406fa5fe7a8b228519feacdcac31e130712f405e21d68c08b9d52162",
+      "stage": "Sky"
+    },
+    {
+      "entries_sha256": "f30235a35a2ec15f502efcea364a4470227325fcef36328b5cd04528a916a8ba",
+      "prelude_sha256": "2132a2f05829e2c18255963582fa409ab1f4653d90c5fe2983f92b95fe03b212",
+      "stage": "Vertex"
+    },
+    {
+      "entries_sha256": "6716c28ae0e699d15695da89c0848ae9d242c0e146b8487aff463ccc19bff4d2",
+      "prelude_sha256": "c4a418c7ad47798274a78f12244e8edfc9661c6f0ab7a43feaab1488df5016b0",
+      "stage": "Material"
+    },
+    {
+      "entries_sha256": "722635b4f94d3570b77e62064ac1d6614d154569520cc6022c0fbc4c95fb93e7",
+      "prelude_sha256": "8acae01b20dbe2031fc110e986e1c3a5293e94c0b4057ee008104f420fd71549",
+      "stage": "Weather"
+    },
+    {
+      "entries_sha256": "a1d88de49274e1d9aed65d2a7fd500e9e385a7a7c9fbb6f9064d4bdbd3a8d6da",
+      "prelude_sha256": "06b5f6b69015f4858ba1dde98bf5a16e1cf66db7ca2004a78032f583a2b894cf",
+      "stage": "Post"
+    },
+    {
+      "entries_sha256": "2dcf7ee0874daeb033058ed55323b74c0da5de4a170cece2e6192500714c0b6a",
+      "prelude_sha256": "c06b6df145e8efd8cd0e31fd2fa77c5fcb03083668ac1d010940a812983ee731",
+      "stage": "Tonemap"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "crates/horizon-client-render/src/biome.rs",
+      "before_sha256": "d36df86ba6336d7a1696a0ea1bff5e3d2929631d25b798f3f14594a00944b257",
+      "after_sha256": "953cc8cd21fa7b9c1b0e1d2656446aaf0ae3f21b93abf64f59fed376cce3ee90"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx.rs",
+      "before_sha256": "e0f92e4f4393f8689151f0acd300ec0a8d3a215cd22be11512db747222767a28",
+      "after_sha256": "3c87f6e42a267c04709f16f73cf055d919b026b7eca45247751a8c25113bd9de"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/block_light.rs",
+      "before_sha256": "a36e62c6bd0537dcb2ad7b270016f09d6e01b64b05d553419651029fe9607d93",
+      "after_sha256": "381a8e5484a150ca804d70803999d8bc69b137aa513f54f3cd991a0cd4964037"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/native_material.rs",
+      "before_sha256": "23dffc59507996590944df8ea51585fa290430f30a18d4580dea9add1c7a537d",
+      "after_sha256": "42087285b997fe063d29c9a322e09a9b63f946af0b8b61b14b17d03fed88b447"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/native_pack.rs",
+      "before_sha256": "161b2866991393194939044a20aa17d6fd45863c40f5891a07e92855353f25b7",
+      "after_sha256": "aeebca6c45b8882c0331e5bef3db2c6b90d1dc94d8d2dcebe161d47afa074a49"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/native_post.rs",
+      "before_sha256": "3915f5b4458904983d6532e00d4c6a5549468059499a065017d803e486ddfb83",
+      "after_sha256": "b341981dae7193f050fa528ac9bd220b3bb1a822b561aab495c523619f9dda29"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/native_shadow.rs",
+      "before_sha256": "807ce3b0660ed1cb65b2fe3a1649f625c06e5da61d1b64669de577d6f534eb1b",
+      "after_sha256": "7bbf0acde853b5d631e78e54101239012d2828d3d23f2dfa6d20f2df044e5c6c"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/native_sky.rs",
+      "before_sha256": "4b548605affdfdf2bd640da9175f1e3280409ee1355d57fdb56d27f6e274b90d",
+      "after_sha256": "c6ad4ebb8a7065d04d0695d3de9f37d2d9a435ac6c548026b1e9e021b51e797a"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/pack_uniforms.rs",
+      "before_sha256": "bd266e6fb569acc4b1701fe2630af17fb1e4ee11299d105a3f0e95a177a4bea8",
+      "after_sha256": "dd174da3226278f895f14f9b59fc9a35da989329dc482fbd003475ad9fa83a44"
+    },
+    {
+      "path": "crates/horizon-client-render/src/gfx/weather.rs",
+      "before_sha256": "046d3cbd903a720ad129f72a72384239e12c4cdc54d6e4c21e34e4aa5daccdc5",
+      "after_sha256": "d862295754c390a29c9be78cbc1dbf0b3272a846c03e92eafdcaa2f527632f3d"
+    },
+    {
+      "path": "crates/horizon-client-render/src/particles.rs",
+      "before_sha256": "be8a90597e81c55f4d60bd504c1afb76c188a7d57b2cdb072e6939bb9591bcaa",
+      "after_sha256": "b804e0435a7ee242c6995ac263df11739db1730a1616ef825a6834cdc6ad01c3"
+    },
+    {
+      "path": "crates/horizon-client-render/src/shader_pack_list.rs",
+      "before_sha256": "23e155720a08fe01c2d7432351acf86679c32025595a0e5cc8dc328636d61d61",
+      "after_sha256": "34b211ebc8088d134829481fc388a5a4245f23ddaedce3ed57c58573954226a8"
+    },
+    {
+      "path": "crates/horizon-client/src/game.rs",
+      "before_sha256": "136898301ab724fd26616d15e00a0aef0fae282444fc41d70c6c30050ab46c57",
+      "after_sha256": "344443fb8475b27fbee9180b58875c346d2f1e6e5332233fcaf098081c6a8125"
+    },
+    {
+      "path": "crates/horizon-client/src/game/afterglow_canopy.rs",
+      "before_sha256": null,
+      "after_sha256": "05950e7083f5990801c3835deb7429b9a4a358db9c92d79ecdf915408cb7682a"
+    },
+    {
+      "path": "crates/horizon-client/src/game/control.rs",
+      "before_sha256": "e89643eb5a2121b0b86f6c189e13c916b50c03f68603a2fdd7db3c2c1c483faa",
+      "after_sha256": "31f4acea3c2d0f1b8e48adad6d712cf03751ec27513b3f36162969d628511833"
+    },
+    {
+      "path": "crates/horizon-client/src/game/native_shaders.rs",
+      "before_sha256": "81ed0da78cc98ff8e2a723756efd1cda104c93ff77e577510a4f0bfa6ba617a5",
+      "after_sha256": "eef78a4fbae5751cda3fc612f2df09913be9f1fa4dcfeea0dd344446ff6bfd86"
+    },
+    {
+      "path": "crates/horizon-client/src/game/render_tick.rs",
+      "before_sha256": "c2895a0aa34128db568d3aa73530dd002b1a0ea5e604f485b5da53e7f5b56439",
+      "after_sha256": "a4ec967f3b54c9fdcc9e814a28bc89bf0c36a89b0d8772f586f9f303465f6342"
+    },
+    {
+      "path": "crates/horizon-client/src/game/shader_packs.rs",
+      "before_sha256": "19daeef4a138aee4ecde1a606a2285e25f9b5ffd491b5fb4f6fb3489ad72c7b6",
+      "after_sha256": "77e2a5e1b32f24b6c1d61f896f261116436c215f61906c68d3aed5ac719dc175"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/inputs.rs",
+      "before_sha256": "f205352cde243bf89d5a6d3319984fd4706eb25818c1d0f8ba50bc6efdb6e6c7",
+      "after_sha256": "f84363a2e5ad8957f74794581b39d16b408961b7a3d2e6eaa4eef5373946276e"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/lib.rs",
+      "before_sha256": "d037fccbbfeb86757a529f5f04eadcfc7f952ee25e29f2f4aadc4c7d596c3b01",
+      "after_sha256": "bc4a3162b152948669a81827ae039290c7b652231d7fcfcee981d29af2386742"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/manifest.rs",
+      "before_sha256": "42154ac2b93a71a33ba309e36df7133bcfc90a393f703bf594f6d1fcf9d22071",
+      "after_sha256": "840c64fb8706078b369786b88e0cc8468856b9e0695acb5471c3c2aa8c43018a"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/package.rs",
+      "before_sha256": "54d1b9703eddd8a5e0e5da4dafba4823bea23fe7beef95f96f1059b9ad940da7",
+      "after_sha256": "e26f1cda324bf79048cefac8bf0b719e82b4bae9dfb6bed1fd467fe292cb0a25"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/profiles.rs",
+      "before_sha256": null,
+      "after_sha256": "66195a1df828410e2e11d7f11d36388874539e669ee146801426312d722f07a7"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/reference.rs",
+      "before_sha256": "169fec4571c0dc4fd995b86ac3619fb2e0d9324d8bba3459b857b4e279026c4c",
+      "after_sha256": "cc401febbbb0289a4582d7391f083ec9eee99c1d3a264978ad4f82330eb7e7f9"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/stages.rs",
+      "before_sha256": "c7f9918b9545a8340022051e788fe3e509b932833f74132695750faa9d916aaa",
+      "after_sha256": "75fc922f68df3e7b5d19f3dc70069ce9ef17bead5d00504134aa139b2dd6d418"
+    },
+    {
+      "path": "crates/horizon-shader-api/src/stratos.rs",
+      "before_sha256": null,
+      "after_sha256": "30f0b02d50f15f09f44c216f847423e2e5a10a287d7881dd52150fcb9c2f3762"
+    },
+    {
+      "path": "crates/horizon-shader-api/tests/profiles.rs",
+      "before_sha256": null,
+      "after_sha256": "fceca98e37bf77d00406aba9cf80e046bc5831ba0b13e17ce21d3652c49cb354"
+    },
+    {
+      "path": "crates/horizon-shader-api/tests/schema.rs",
+      "before_sha256": "5fc09436afae4f581a84b5149d3c317df5376cfcbb63e24cf39da8386f8fad9f",
+      "after_sha256": "fd5a768efb3e071dc727e92edac14583194fd95cb0f41bdc37d35b9b8c770468"
+    },
+    {
+      "path": "crates/horizon-shader-api/tests/stratos.rs",
+      "before_sha256": null,
+      "after_sha256": "78b3c5dbc2aa6785df676efd4d97e649376c006fd4057b69b1864af167d71a03"
+    },
+    {
+      "path": "docs/api/shaders-reference-0.2.md",
+      "before_sha256": "15e576316ad6f9ef88c956ca97ad2c2cd5b6da0bbd0b0b54eb4e23b8c03642fd",
+      "after_sha256": "45f11f7e2bf60bc87280e567aee232be51bdc4d48a7ca1884b6d9c2c58dfbac1"
+    },
+    {
+      "path": "docs/api/shaders-reference.md",
+      "before_sha256": "f4a406302d6d9fb5681a56ade5766c688fb94295c70da8f4023de79882c0659b",
+      "after_sha256": "67f7ba12a0d216e899f7bdd5aa75c40b7a534b175ae0248664ecf337a3eaddcc"
+    },
+    {
+      "path": "docs/api/shaders.md",
+      "before_sha256": "48d3462e3a00133abedabca76560a647d09fcb7eb99da8aba2c9d9c2f980fd12",
+      "after_sha256": "60efa9dadef7dce247bf6a3c67ec3cd17f55cd7217c0c7a8d789b5054bfc7a10"
+    }
+  ]
+}
