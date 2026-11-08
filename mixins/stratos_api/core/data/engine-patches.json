@@ -69,7 +69,7 @@
     {
       "path": "crates/horizon-client/src/game/afterglow_canopy.rs",
       "before_sha256": null,
-      "after_sha256": "05950e7083f5990801c3835deb7429b9a4a358db9c92d79ecdf915408cb7682a"
+      "after_sha256": "5495b7f8344cb48dbb3a6a5005540b93e7a7f759d9ae537195d113906070f34f"
     },
     {
       "path": "crates/horizon-client/src/game/control.rs",
@@ -79,7 +79,7 @@
     {
       "path": "crates/horizon-client/src/game/native_shaders.rs",
       "before_sha256": "81ed0da78cc98ff8e2a723756efd1cda104c93ff77e577510a4f0bfa6ba617a5",
-      "after_sha256": "eef78a4fbae5751cda3fc612f2df09913be9f1fa4dcfeea0dd344446ff6bfd86"
+      "after_sha256": "6f5a014d8ce2fb6b1e7fed385cc7c0462fb735becef2c519560dc1bdc0c82187"
     },
     {
       "path": "crates/horizon-client/src/game/render_tick.rs",
@@ -89,7 +89,7 @@
     {
       "path": "crates/horizon-client/src/game/shader_packs.rs",
       "before_sha256": "19daeef4a138aee4ecde1a606a2285e25f9b5ffd491b5fb4f6fb3489ad72c7b6",
-      "after_sha256": "77e2a5e1b32f24b6c1d61f896f261116436c215f61906c68d3aed5ac719dc175"
+      "after_sha256": "c038efba90af6d56db120b4a4b27e7bd3498644c3b23fb0a9a3f41861a76725e"
     },
     {
       "path": "crates/horizon-shader-api/src/inputs.rs",

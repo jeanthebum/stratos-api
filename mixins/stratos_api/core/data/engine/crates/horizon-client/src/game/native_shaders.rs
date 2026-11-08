@@ -26,6 +26,9 @@ pub(super) struct NativeShaders {
     pub canopy: super::afterglow_canopy::Canopy,
     /// The pack's files when it was last read (`fingerprint`).
     stamp: Option<u64>,
+    /// Dependency of the selected/last-good pack, retained while switched off.
+    stratos_required: bool,
+    stratos_enabled: Option<bool>,
     looked: Option<Instant>,
     selection: String,
     resolved: PathBuf,
@@ -60,6 +63,7 @@ impl NativeShaders {
     pub fn select(&mut self, name: &str) {
         self.picked = name.to_owned();
         self.canopy = Default::default();
+        self.stratos_required = false;
         self.stamp = None;
         self.looked = None;
     }
@@ -73,8 +77,37 @@ impl NativeShaders {
 }
 
 impl Game<'_> {
+    /// Disable GPU passes and weather immediately, without deleting the selection
+    /// or option values. Re-enabling invalidates the reload signature.
+    pub(super) fn stratos_sync_enabled(&mut self) {
+        let enabled = self.native_on("stratos_api");
+        let previous = self.native_shaders.stratos_enabled;
+        if previous == Some(enabled) {
+            return;
+        }
+        self.native_shaders.stratos_enabled = Some(enabled);
+        self.native_shaders.stamp = None;
+        self.native_shaders.looked = None;
+        if !enabled && self.native_shaders.stratos_required {
+            if let Some(renderer) = &mut self.renderer {
+                renderer.drop_shader_packs();
+            }
+            self.native_shaders.canopy = Default::default();
+            self.set_translucent_layers(Vec::new());
+            self.pack_ids = None;
+            log::info!("StratosAPI disabled: dependent shader and water effects suspended");
+        }
+        if enabled && previous == Some(false) && self.native_shaders.stratos_required {
+            // Starting with Stratos disabled creates Horizon's normal framebuffer.
+            // Rebuild resources/renderer through the existing reload path so the
+            // newly enabled HDR pack gets floating-point storage, not clamped SDR.
+            self.reload_packs();
+        }
+    }
+
     /// Builds the pack at `path` when its files changed since it was last read.
     pub(super) fn tick_native_shader_pack(&mut self, path: &Path) {
+        self.stratos_sync_enabled();
         // A reload would replace the pack a `screenshot-sequence` draws: it waits for the reply.
         if self.screenshot_sequence.is_some() {
             return;
@@ -91,10 +124,21 @@ impl Game<'_> {
         }
         let reload = state.stamp.is_some();
         state.stamp = stamp;
+        let loaded = Pack::read(path);
+        // A malformed edit must not let a disabled last-good pack restart.
+        let requires = loaded
+            .as_ref()
+            .map_or(self.native_shaders.stratos_required, |p| {
+                requires_stratos(&p.manifest)
+            });
+        if requires && !self.native_on("stratos_api") {
+            self.native_shaders.stratos_required = true;
+            return;
+        }
         let Some(renderer) = &mut self.renderer else {
             return;
         };
-        let result = Pack::read(path).map_err(|e| vec![e]).and_then(|pack| {
+        let result = loaded.map_err(|e| vec![e]).and_then(|pack| {
             if let Some(why) = not_drawn(&pack.manifest, linear_frame_switch()) {
                 return Err(vec![why]);
             }
@@ -171,6 +215,7 @@ impl Game<'_> {
         let name = path.file_name().unwrap_or_default().to_string_lossy();
         match result {
             Ok((m, labels, translucent, canopy)) => {
+                self.native_shaders.stratos_required = requires_stratos(&m);
                 self.native_shaders.canopy.water = canopy.liquid;
                 self.native_shaders.canopy.strength = canopy.drips;
                 self.native_shaders.canopy.humidity = canopy.humidity;
@@ -200,6 +245,10 @@ impl Game<'_> {
 /// Why the game doesn't draw a pack the check may still pass: what it asks of shader API 0.2
 /// (docs/design/hdr-linear-light.md, steps 3 and 4) isn't served yet. 0.2 itself is drawn
 /// under `HORIZON_HDR_FRAME=float` (`switch`).
+pub(super) fn requires_stratos(m: &Manifest) -> bool {
+    m.stratos.is_some() || (m.api == Api::V0_2 && m.id == "afterglow_hdr")
+}
+
 fn not_drawn(m: &Manifest, switch: bool) -> Option<String> {
     if m.blend == Blend::Linear {
         return Some(

@@ -1,0 +1,3 @@
+[workspace]
+members = ["mixins/stratos_api/core"]
+resolver = "3"

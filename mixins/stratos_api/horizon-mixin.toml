@@ -1,6 +1,6 @@
 [mod]
 id = "stratos_api"
-version = "0.1.0"
+version = "0.1.1"
 priority = 100
 
 [compatibility]
@@ -10,3 +10,23 @@ horizon_revision = "fd06d1c2650b52d8d4bb3d808ca73e55971ba717"
 id = "core"
 path = "core"
 dependent = "horizon-shader-api"
+
+# Standard hooks manage discovery and live enable/disable. GPU layout changes
+# still require the explicitly pinned renderer overlay; no generic hooks claim.
+[[injection]]
+id = "list"
+kind = "HEAD"
+target = "horizon_client::game::native_hooks::Game<'_>::native_mods"
+helper = "list.rs"
+bindings = [
+  { name = "mods", ty = "&mut Vec<crate::game::native_hooks::NativeMod>", value = "&mut *mods" },
+]
+
+[[injection]]
+id = "lifecycle"
+kind = "HEAD"
+target = "horizon_client::game::native_hooks::Game<'_>::native_frame"
+helper = "lifecycle.rs"
+bindings = [
+  { name = "game", ty = "&mut crate::game::Game<'_>", value = "&mut *self" },
+]

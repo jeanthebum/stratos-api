@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "id": "stratos_api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "game": "26.3",
   "horizon": "fd06d1c2650b52d8d4bb3d808ca73e55971ba717",
   "mixins": "5a64af938ec86b00d53d16a408aabc0038fb3e57"

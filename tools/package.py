@@ -32,7 +32,7 @@ def main():
         data = (mod / 'core/data/engine' / name).read_bytes()
         assert digest(normalized(data)) == entry['after_sha256'], name
     def eligible(file):
-        return file.is_file() and not any(p in {'.git','target','dist','__pycache__'} for p in file.relative_to(ROOT).parts) and file.name != 'Cargo.lock' and file.suffix != '.pyc'
+        return file.is_file() and not any(p in {'.git','target','dist','releases','__pycache__'} for p in file.relative_to(ROOT).parts) and not (file.name == 'Cargo.lock' and file.parent != ROOT) and file.suffix != '.pyc'
     files = [f for f in mod.rglob('*') if eligible(f)]
     assert len(files) < 511
     dist = ROOT / 'dist'; dist.mkdir(exist_ok=True)

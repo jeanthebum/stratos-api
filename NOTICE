@@ -1,4 +1,4 @@
 StratosAPI includes modified source from Horizon, copyright (c) 2026 Ludovic Marie and the Horizon contributors, under the MIT license.
 Original integration and API work: StratosAPI contributors.
 Horizon source: https://github.com/horizon-rust/horizon/tree/fd06d1c2650b52d8d4bb3d808ca73e55971ba717
-No Minecraft assets, worlds, Atmos shader artwork or compiled executables are included.
+No Minecraft assets, worlds or Atmos shader artwork are included. Optional prebuilt renderer distributions retain the Horizon license and third-party notices.

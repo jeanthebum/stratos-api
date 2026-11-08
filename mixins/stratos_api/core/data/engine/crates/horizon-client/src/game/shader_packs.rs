@@ -110,6 +110,9 @@ pub(super) fn picked_pack_shape(settings: &horizon_client::settings::Settings) -
         horizon_client::shader_pack_list::resolve(&dir, picked).1
     };
     let active = !picked.is_empty()
+        && !(settings.mods.disabled.contains("stratos_api")
+            && horizon_shader_api::Pack::read_manifest(&path)
+                .is_ok_and(|m| super::native_shaders::requires_stratos(&m)))
         && path
             .file_name()
             .is_none_or(|f| !active_pack(&f.to_string_lossy(), &settings.mods).is_empty());

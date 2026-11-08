@@ -60,6 +60,7 @@ impl Canopy {
 }
 
 // Pure configuration/rate helpers also exercised by the release harness.
+#[cfg(test)]
 pub(super) fn settings<'a>(id: &str, values: impl Iterator<Item = (&'a str, f64)>) -> [f32; 2] {
     let (mut enabled, mut strength, mut humidity) = (true, 0.0, 1.0);
     for (name, value) in values {
